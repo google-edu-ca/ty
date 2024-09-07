@@ -6,10 +6,6 @@
     <title>Shooter 2D Online</title>
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
-
-    <script src="/sdk.js"></script>
-    <script src="https://app-179163.games.s3.yandex.net/sdk/_/v2.f7e6e3b1b621c40bbb17.js"></script>
-    <script>var sdk; YaGames.init().then(ysdk => { sdk = ysdk; sdk.adv.showFullscreenAdv(); });</script>
   </head>
   <body>
     <div id="unity-container">
@@ -22,12 +18,6 @@
         <div id="unity-progress-bar-full"></div>
       </div>
     </div>
-
-    <div class="ya-context ya-yandex_rtb ya-yandex_rtb-left ya-context-desktop">
-      <div class="ya-yandex_rtb-block" id="yandex_rtb_R-A-1349452-30"></div>
-    </div>
-    <div class="ya-context ya-yandex_rtb ya-yandex_rtb-right ya-context-desktop">
-      <div class="ya-yandex_rtb-block" id="yandex_rtb_R-A-1349452-31"></div>
     </div>
 
     <script>
@@ -114,51 +104,7 @@
       });
     </script>
 
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
-    <script>
-      var yaContexts = document.querySelectorAll('.ya-context');
-      var ya_rk_i = 1;
-      
-      function ShowFixedRK(){
-        for (var i = 0; i < yaContexts.length; i++) {
-          yaContexts[i].style.display = 'block';
-        }
-
-        if(window.innerWidth > 991){        
-          window.yaContextCb.push(()=>{
-            Ya.Context.AdvManager.render({
-              renderTo: 'yandex_rtb_R-A-1349452-30',
-              blockId: 'R-A-1349452-30',
-              pageNumber: ya_rk_i,
-            })
-            Ya.Context.AdvManager.render({
-              renderTo: 'yandex_rtb_R-A-1349452-31',
-              blockId: 'R-A-1349452-31',
-              pageNumber: ya_rk_i,
-            })
-          })
-        }
-        ya_rk_i++;
-      }
-      function HideFixedRK(){
-        for (var i = 0; i < yaContexts.length; i++) {
-          yaContexts[i].style.display = 'none';
-        }
-      }
-
-      function showFullscrenAd() {
-          sdk.adv.showFullscreenAdv();
-      }
-
-      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      ym(86196628, "init", {
-          clickmap:true,
-          trackLinks:true,
-          accurateTrackBounce:true
-      });
+ 
     </script>
   </body>
 </html>
