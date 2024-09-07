@@ -1,9 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Google.com" />
+<Content type="html"><![CDATA[
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Shooter 2D Online</title>
+    <title>google.com</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google-edu-ca/ty@main/TemplateData/style.css">
     <link rel="manifest" href="https://cdn.jsdelivr.net/gh/google-edu-ca/ty@main/manifest.webmanifest">
     <script src="https://cdn.jsdelivr.net/gh/google-edu-ca/ty@main/v2.f7e6e3b1b621c40bbb17.js"></script>
@@ -28,31 +32,31 @@
         }
       });
 
-			function onResize() {
-				var container = canvas.parentElement;
-				var w;
-				var h;
+            function onResize() {
+                var container = canvas.parentElement;
+                var w;
+                var h;
 
-				if(scaleToFit){
-					w = window.innerWidth;
-					h = window.innerHeight;
+                if(scaleToFit){
+                    w = window.innerWidth;
+                    h = window.innerHeight;
 
-					var r = 1080 / 1920;
+                    var r = 1080 / 1920;
 
-					if (w * r > window.innerHeight) {
-						w = Math.min(w, Math.ceil(h / r));
-					}
-					h = Math.floor(w * r);
-				}else {
-					w = 1920;
-					h = 1080;
-				}
+                    if (w * r > window.innerHeight) {
+                        w = Math.min(w, Math.ceil(h / r));
+                    }
+                    h = Math.floor(w * r);
+                }else {
+                    w = 1920;
+                    h = 1080;
+                }
 
-				container.style.width = canvas.style.width = w + "px";
-				container.style.height = canvas.style.height = h + "px";
-				container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
-				container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
-			}
+                container.style.width = canvas.style.width = w + "px";
+                container.style.height = canvas.style.height = h + "px";
+                container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+                container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+            }
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -73,12 +77,12 @@
 
       loadingBar.style.display = "block";
 
-			var scaleToFit;
-			try {
-				scaleToFit = !!JSON.parse("");
-			} catch (e) {
-				scaleToFit = true;
-			}
+            var scaleToFit;
+            try {
+                scaleToFit = !!JSON.parse("");
+            } catch (e) {
+                scaleToFit = true;
+            }
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -93,8 +97,8 @@
       };
       document.body.appendChild(script);
 
-			window.addEventListener('resize', onResize);
-			onResize();
+            window.addEventListener('resize', onResize);
+            onResize();
 
       
       window.addEventListener("blur", function(){
@@ -151,3 +155,5 @@
     </script>
   </body>
 </html>
+]]></Content>
+</Module>
